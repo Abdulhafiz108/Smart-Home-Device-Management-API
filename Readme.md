@@ -6,61 +6,62 @@ OVERVIEW
 The Smart Home Device Management API is a backend system for managing and simulating smart home devices. It provides functionality for adding, updating, deleting, and scheduling device actions, as well as simulating device events and logging activities. This API is built using Flask and integrates with a MySQL database.
 
 
-FEATURES
--Device Management: Add, update, delete, and retrieve smart home devices.
--Scheduling: Schedule actions (e.g., turning devices on or off) at specific times.
--Simulation: Simulate random device status changes (on/off).
--Logging: Track device actions with time-stamped logs.
--Error Handling: Comprehensive error handling for database operations, scheduling, and device updates.
+FEATURES  
+-Device Management: Add, update, delete, and retrieve smart home devices.  
+-Scheduling: Schedule actions (e.g., turning devices on or off) at specific times.  
+-Simulation: Simulate random device status changes (on/off).  
+-Logging: Track device actions with time-stamped logs.  
+-Error Handling: Comprehensive error handling for database operations, scheduling, and device updates.  
 
 
-TECH STACK
--Backend: Flask (Python)
--Database: MySQL
--Scheduling: APScheduler
--Simulation: Threading for simulating device status changes
--Logging: Device actions are logged in the database
--Tools: Git, Git Bash
+TECH STACK  
+-Backend: Flask (Python)  
+-Database: MySQL  
+-Scheduling: APScheduler  
+-Simulation: Threading for simulating device status changes  
+-Logging: Device actions are logged in the database  
+-Tools: Git, Git Bash  
 
 
-API ENDPOINTS
- Device Management
- -GET /devices: Retrieve a list of all devices
- -POST /devices: Add a new device
- -PUT /devices/<id>: Update the status of a device
- -DELETE /devices/<id>: Remove a device
- -GET /devices/logs: Retrieve device logs
+API ENDPOINTS  
+ Device Management  
+ -GET /devices: Retrieve a list of all devices  
+ -POST /devices: Add a new device  
+ -PUT /devices/<id>: Update the status of a device  
+ -DELETE /devices/<id>: Remove a device  
+ -GET /devices/logs: Retrieve device logs  
 
- Scheduling
- -POST /schedule: Schedule a device action at a specific time
- -GET /schedule: Get all scheduled activities
+ Scheduling  
+ -POST /schedule: Schedule a device action at a specific time  
+ -GET /schedule: Get all scheduled activities  
  
- Simulation
- -POST /simulate: Run a simulation for all devices
- -POST /simulate/<id>: Simulate a specific device’s status change
- -POST /shutdown: Shut down the simulation
+ Simulation  
+ -POST /simulate: Run a simulation for all devices  
+ -POST /simulate/<id>: Simulate a specific device’s status change  
+ -POST /shutdown: Shut down the simulation  
 
 
-INSTALLATION
- Clone the repository:
- -git clone https://github.com/your-username/Smart-Home-Device-Management-API.git
- -cd Smart-Home-Device-Management-API
+INSTALLATION  
+ Clone the repository:  
+ -git clone https://github.com/your-username/Smart-Home-Device-Management-API.git  
+ -cd Smart-Home-Device-Management-API  
 
- Set up your virtual environment and install dependencies:
-  -python -m venv venv
-  -source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-  -pip install -r requirements.txt
+ Set up your virtual environment and install dependencies:  
+  -python -m venv venv  
+  -source venv/bin/activate  # On Windows use `venv\Scripts\activate`  
+  -pip install -r requirements.txt  
 
- Set up your MySQL database:
-  -CREATE DATABASE smart_home;
+ Set up your MySQL database:  
+  -CREATE DATABASE smart_home;  
 
- Update the db.py file with your MySQL database connection details.
+ Update the db.py file with your MySQL database connection details.  
 
- Start the Flask app:
-  -flask run
+ Start the Flask app:  
+  -flask run  
 
-USAGE
-Below is a summary of available API endpoints:
+
+USAGE  
+Below is a summary of available API endpoints:  
 
    - **GET `/api/devices`**: Retrieve a list of all devices.
    
@@ -124,10 +125,11 @@ Below is a summary of available API endpoints:
      curl -X POST http://127.0.0.1:5000/api/shutdown
      ```
 
-FUTURE ENHANCEMENTS
--Implement user authentication for secure device management.
--Add support for more device types and statuses.
--Create a frontend dashboard for device monitoring and control.
+FUTURE ENHANCEMENTS  
+-Implement user authentication for secure device management.  
+-Add support for more device types and statuses.  
+-Create a frontend dashboard for device monitoring and control.  
 
-CONTRIBUTING
-Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
+
+CONTRIBUTING  
+Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.  
