@@ -67,14 +67,14 @@ Below is a summary of available API endpoints:
    
      Example usage:
      ```bash
-     curl -X GET http://127.0.0.1:5000/api/devices
+     curl -X GET http://127.0.0.1:8000/api/devices
      ```
 
    - **POST `/api/devices`**: Add a new device.
      
      Example usage:
      ```bash
-     curl -X POST http://127.0.0.1:5000/api/devices \
+     curl -X POST http://127.0.0.1:8000/api/devices \
      -H "Content-Type: application/json" \
      -d '{"name": "Living Room Light", "status": "Off"}'
      ```
@@ -83,7 +83,7 @@ Below is a summary of available API endpoints:
      
      Example usage:
      ```bash
-     curl -X PUT http://127.0.0.1:5000/api/devices/1 \
+     curl -X PUT http://127.0.0.1:8000/api/devices/1 \
      -H "Content-Type: application/json" \
      -d '{"action": "On"}'
      ```
@@ -92,37 +92,44 @@ Below is a summary of available API endpoints:
      
      Example usage:
      ```bash
-     curl -X DELETE http://127.0.0.1:5000/api/devices/1
+     curl -X DELETE http://127.0.0.1:8000/api/devices/1
      ```
 
    - **GET `/api/logs`**: Retrieve a list of all device logs.
      
      Example usage:
      ```bash
-     curl -X GET http://127.0.0.1:5000/api/logs
+     curl -X GET http://127.0.0.1:8000/api/device_logs
      ```
 
    - **POST `/api/schedule`**: Schedule a device to perform an action at a specific time.
      
      Example usage:
      ```bash
-     curl -X POST http://127.0.0.1:5000/api/schedule \
+     curl -X POST http://127.0.0.1:8000/api/schedule \
      -H "Content-Type: application/json" \
      -d '{"device_id": 1, "action": "On", "time": "2024-10-22 18:30:00"}'
+     ```
+
+   - **GET `/api/scheduled`**: Retrieve a list of all scheduled actions.
+
+     Example usage:
+     ```bash
+     curl -X GET http://127.0.0.1:8000/api/scheduled
      ```
 
    - **POST `/api/simulate`**: Run a simulation of all devices and update their status randomly.
 
      Example usage:
      ```bash
-     curl -X POST http://127.0.0.1:5000/api/simulate
+     curl -X POST http://127.0.0.1:8000/api/simulate
      ```
 
    - **POST `/api/shutdown`**: Stop any ongoing device simulations.
 
      Example usage:
      ```bash
-     curl -X POST http://127.0.0.1:5000/api/shutdown
+     curl -X POST http://127.0.0.1:8000/api/shutdown
      ```
 
 FUTURE ENHANCEMENTS  

@@ -44,8 +44,7 @@ def schedule_device_action():
 
         # Parse and schedule the action at the given time
         try:
-            scheduled_time = datetime.strptime
-            (schedule_time, '%Y-%m-%d %H:%M:%S')
+            scheduled_time = datetime.strptime(schedule_time, '%Y-%m-%d %H:%M:%S')
         except ValueError:
             return jsonify({
                 "error": (

@@ -94,7 +94,7 @@ def run_simulation_interval():
     Returns:
         None
     """
-    simulation_interval = 60
+    simulation_interval = 15
     check_interval = 1
     elapsed_time = 0
 
