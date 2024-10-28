@@ -48,7 +48,7 @@ INSTALLATION
 
  Set up your virtual environment and install dependencies:  
   -python -m venv venv  
-  -source venv/bin/activate  # On Windows use `venv\Scripts\activate`  
+  -source venv/bin/activate  # On Windows use `venv/Scripts/activate`  
   -pip install -r requirements.txt  
 
  Set up your MySQL database:  
